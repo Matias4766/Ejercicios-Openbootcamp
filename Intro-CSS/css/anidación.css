@@ -1,0 +1,47 @@
+html{
+    font-size: 10px;
+}
+
+body {
+    display: flex;
+}
+
+.boton {
+    padding: 2.5rem 7rem;
+    cursor: pointer;
+    position: relative;
+    border-radius: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.boton::before {
+    content: "Pasa por encima";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    transition: .2s ease;
+}
+
+.boton::after {
+    content: "¡Hecho!";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    transition: .2s ease;
+    opacity: 0;
+}
+
+.boton:hover::before {
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.boton:hover::after {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.boton:hover {
+    background: darkgreen;
+    color: aliceblue;
+}
